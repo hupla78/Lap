@@ -1,0 +1,50 @@
+.panel-b{
+background: black;
+color: white;
+border: 2px #666 solid;
+}
+
+.panel-w{
+background: white;
+color: black;
+border: 2px #666 solid;
+}
+
+.w{
+background: #fff;
+}
+
+.b{
+background: #000;
+}
+
+.r{
+background: #b88;
+}
+
+.b{
+background: #ddc;
+}
+
+.g{
+
+background: #ddd;
+}
+
+.p{
+background: #dcc;
+}
+
+.sec{
+height: 2px;
+}
+
+.bord{
+border-left: 1px black solid;
+border-right: 1px black solid;
+border-top: 1px red solid;
+}
+
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea{
+margin: 0px 0px 5px 0px ;}
