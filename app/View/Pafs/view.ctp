@@ -15,30 +15,31 @@
 </div>
     
         <div class="large-6 small-12 columns panel" data-equalizer-watch>
-<div class="row">
+<div class="row" data-equalizer>
         <h4 class="text-center">Faire une action</h4>
         <br>
-        <div class="large-4 small-4 columns"><a href="#" class="small button">voir un element</a></div>
-        <div class="large-4 small-4 columns"><a href="#" class="small button">édité un element</a></div>
-        <div class="large-4 small-4 columns"><a href="#" class="small button">suprimé un element</a></div>
+        <div class="large-6 small-3 columns"><a class="small button" style="display:block;" href="#" >rajouté un element</a></div>
+        <div class="large-6 small-3 columns"><a class="small button" style="display:block;" href="#" >voir un element</a></div>
+        <div class="large-6 small-3 columns"><a class="small button" style="display:block;" href="#" >édité un element</a></div>
+        <div class="large-6 small-3 columns"><a class="small button" style="display:block;" href="#" >suprimé un element</a></div>
           
 </div>
     </div>
     </div>
     
-    <div class="large-12 medium-12 small-12 columns panel">
-    <table>
+
+    <table width="100%">
  <thead>
         <tr>
         <th>ID</th>
-		<th>Dom</th>
+		<th>DOM</th>
 		<th>PF</th>
 		<th>Pilote</th>
         <th>Type</th>    
 		<th>Objet</th>		
         <th>Traitement</th>       
-        <th>Criticite</th>       
-        <th>Budget</th> 
+        <th>Crée</th>       
+        <th>Date</th> 
 		<th>Action</th> 
         </tr>
 </thead>
@@ -49,13 +50,17 @@
    <tr>
        <td><?php echo($temp['Paf']['id']);?></td>
        <td><?php echo($temp['Paf']['n_DA']);?></td>
-       <td></td>
-       <td></td>
-       <td></td>
-       <td></td>
-       <td></td>
-       <td></td>
-       <td></td>
+       <td><?php echo($temp['Paf']['n_DA']);?></td>
+       <td><?php echo($temp['Paf']['n_DA']);?></td>
+       <td><?php echo($temp['Paf']['n_DA']);?></td>
+       <td><?php echo($temp['Paf']['n_DA']);?></td>
+       <td><?php echo($temp['Paf']['n_DA']);?></td>
+       <td><?php echo($temp['Paf']['n_DA']);?></td>
+       <td>
+<i>cre   : </i><?php echo($temp['Paf']['created']);?><br>
+<i>mod: </i><?php echo($temp['Paf']['updated']);?><br>
+<i>fin : </i> <?php echo($temp['Paf']['updated']);?>
+       </td>
 <td>
 <?php 
 echo $this->Html->link('Voir',array('controller'=>'Pafs','action'=>'voir'));?>
@@ -64,7 +69,7 @@ echo $this->Html->link('Voir',array('controller'=>'Pafs','action'=>'voir'));?>
 echo $this->Html->link('Editer',array('controller'=>'Pafs','action'=>'edit',$temp['Paf']['id']));?>
 <br>
 <?php
-echo $this->Html->link('Imprimer',array('controller'=>'Pafs','action'=>'Paf_print'));?>
+echo $this->Html->link('Imprimer',array('controller'=>'Pafs','action'=>'Paf_print',$temp['Paf']['id']));?>
 </td> 
 
        
@@ -81,9 +86,6 @@ echo $this->Html->link('Imprimer',array('controller'=>'Pafs','action'=>'Paf_prin
 
     
     </table>
-
-</div>
-
 
 
 

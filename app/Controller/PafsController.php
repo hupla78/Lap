@@ -3,12 +3,20 @@
 
 class PafsController extends AppController{
 
-public $components = array('Session','Cookie','PdfEdf');
+public $components = array('Session','Cookie','PdfEdfReP');
 
-public function Paf_print(){
+public function Paf_print($id = false){
 
-$this->PdfEdf->generate();
+$content = $this->Paf->findById($id);
+
+
+if($id){
+$this->PdfEdfReP->generate($content);
+$this->PdfEdfReP->output();
 die();
+}else{
+$this->redirect(array('controller'=>'Pafs','action'=>'view'));
+}
 
 }
 
@@ -39,10 +47,8 @@ public function edit($id = false)
     
     }
     else{
-    
-    $this->Paf->create($this->request->data);
-    $this->Paf->save();
-    $this->redirect('/');
+    $this->Paf->save($this->request->data);
+    $this->redirect(array('controller'=>'Pafs','action'=>'view'));
     
     }}else{
      $this->redirect('/');

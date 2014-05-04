@@ -33,16 +33,19 @@ echo $this->Form->create('Paf');?>
 		    
 		    
 		    
-		    
-		    
 		</fieldset>
 			
 		
 
-    <div class="large-6 small-6 columns"><?php echo($this->Form->input('info',array('type'=>'select','label'=>false,'options' => array('Rentrée des infos Suplémentaires','ne rentré que ces info pour l\'instant'))));?>
-</div>
-    <div class="large-6 small-6 columns t-cent"><?php echo $this->Form->end('validation')?>
+    <div class="large-5 small-5 columns"><?php echo($this->Form->input('info',array('type'=>'select','label'=>false,'options' => array('je souhaite remplire d\'autre information','ne rentré que ces info pour l\'instant'))));?>
 </div>
 
+    <div class="large-7 small-7 columns inline-date">
+    
+    <?php echo $this->Form->input('date de fin prevue',array('type'=>'date','label'=>'Date de Fin :  '))?>
+    </div>
+    
+    <div class=""><?php echo $this->Form->end('validation')?>
+</div>
 
 
