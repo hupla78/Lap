@@ -1,5 +1,26 @@
+<?php $this->start('nav-edit');?>
+
+<div class="magellan-container" data-magellan-expedition="fixed" data-options="destination_threshold:65;throttle_delay:0;" style="">
+  <dl class="sub-nav">
+    <dd data-magellan-arrival="Top" class=""><a href="#Top" class="button">Top</a></dd>
+    <dd data-magellan-arrival="Information_Géneral" class=""><a href="#Information_Géneral">Information</a></dd>
+    <dd data-magellan-arrival="Besoin" class=""><a href="#Besoin">Besoin</a></dd>
+    <dd data-magellan-arrival="Budget" class=""><a href="#Budget">Budget</a></dd>
+    <dd data-magellan-arrival="Documents" class=""><a href="#Documents">Documents</a></dd>
+    <dd data-magellan-arrival="Jalons" class=""><a href="#Jalons">Jalons</a></dd>
+    <dd data-magellan-arrival="Revue_des_exigences" class=""><a href="#Revue_des_exigences">Revue des exigences</a></dd>
+    <dd data-magellan-arrival="Imputation" class=""><a href="#Imputation">Imputation</a></dd>
+    <dd data-magellan-arrival="Bottom" class=""><a href="#Bottom" class="button">Bottom</a></dd>
+  </dl>
+</div>
+<?php $this->end();?>
 
 
+
+
+
+
+<br>
 
 <h3 class="text-center"><strong><?php echo($action); ?>
 </strong></h3>
@@ -20,19 +41,21 @@
 
 <div class="large-6 columns" data-equalizer-watch>
 
+    <a name="Information_Géneral"></a>
+
 
 <fieldset>
-    <legend>Information Géneral</legend>
+    <legend><h4 data-magellan-destination="Information_Géneral">Information Géneral</h4></legend>
     
   
     
+
     
     
     
     
 
 <?php echo(
- $this->Html->link('lol',array('controller'=>'Pafs','action'=>'edit',3)).
   
 //clef prim
 $this->Form->input('id').
@@ -119,10 +142,12 @@ $this->Form->input('groupe',array(
    
 </div>
 
-
+    
 <div class="large-6 columns " data-equalizer-watch>
+<a name="Besoin"></a>
 <fieldset>
-    <legend>Besoin</legend>
+
+    <legend><h4 data-magellan-destination="Besoin">Besoin</h4></legend>
     
     
     
@@ -174,7 +199,10 @@ $this->form->input('Object',array('type'=>'textarea'))
 
 <div class="large-6 columns " data-equalizer-watch>
 
-    <fieldset><legend>Budget</legend>
+    <a name="Budget"></a>
+<fieldset>
+
+    <legend><h4 data-magellan-destination="Budget">Budget</h4></legend>
 
     
 <?php echo(
@@ -194,7 +222,12 @@ $this->Form->input('date2020',array('type'=>'number','value'=>'0'))
 </div>
 
 <div class="large-6 columns" data-equalizer-watch>
-<fieldset><legend>Documents</legend>
+
+
+<a name="Documents"></a>
+<fieldset>
+
+    <legend><h4 data-magellan-destination="Documents">Documents</h4></legend>
     
     
 <?php echo(
@@ -211,7 +244,13 @@ $this->Form->input('contratCadre')
 </div>
 
 <div class="large-12 columns">
-<fieldset><legend>Jalons</legend>
+    <a name="Jalons"></a>
+    
+<fieldset>
+
+    <legend><h4 data-magellan-destination="Jalons">Jalons</h4></legend>
+    
+    
 <div class="row">
     
     <div class="large-6 columns">
@@ -245,8 +284,14 @@ $this->Form->input('Sollicitation_DA')
      
 <div class="large-6 columns" data-equalizer-watch>
     
-     <fieldset><legend>Revue des exigences</legend>
-<?php 
+    <a name="Revue_des_exigences"></a>
+    
+<fieldset>
+
+    <legend><h4 data-magellan-destination="Revue_des_exigences">Revue des exigences</h4></legend>
+    
+    
+    <?php 
     echo(
     
 $this->Form->input('DateRDE',array('type'=>'Date')).
@@ -266,7 +311,10 @@ $this->Form->input('Reprévision')
  
 <div class="large-6 columns" data-equalizer-watch>
     
-<fieldset><legend>Imputation</legend>
+    
+    <a name="Imputation"></a>
+<fieldset>
+    <legend><h4 data-magellan-destination="Imputation">Imputation</h4></legend>
         
 <?php    echo(
 $this->Form->input('OI/EOTP').
@@ -303,7 +351,16 @@ $this->Form->input('Budget')
 
 
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 

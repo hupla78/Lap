@@ -42,45 +42,52 @@ EDF:
 	?>
 </head>
 <body>
+	<a name="Top" data-magellan-destination="Top"></a>
+
+	
+	
 	<div class="header panel">
-        <div class="row">
+        <div class="row" data-equalizer>
      
-        <div class="large-3 columns panel">
-            
-        </div>   
-        <div class="panel large-7 columns">
+        
+        <div class="panel large-8 small-6 columns" data-equalizer-watch>
+        <div class="row text-center">
+            <div class="columns large-3 small-3"><a href="#">Paf</a></div>
+            <div class="columns large-3 small-3"><a href="#">aaaa</a></div>
+            <div class="columns large-3 small-3"><a href="#">bbbb</a></div>
+            <div class="columns large-3 small-3"><a href="#">cccc</a></div>
+        </div>
 
             
         </div>
         
-        <div class="large-2 columns text-center">
+        <div class="panel large-2 small-3 text-center columns" data-equalizer-watch>
+            <?php echo($this->Html->link('Connection',array('controller'=>'User','action'=>'Connection'))); ?>   
+        </div>
+        <div class="large-2 small-3 columns text-center panel" data-equalizer-watch>
             <a href="#" data-dropdown="help" data-options="is_hover:true">Help</a>
         </div>
         
             
-            
-            
-            
-        <div class="columns large-12 panel">
-            <div class="row">
-                
-            
-              
-              
-        </div>
-
-        </div>
-    </div>
+   
+</div>
+ </div>
+    <div class="large-1 small-1 columns">
     <div id="help" data-dropdown-content class="medium f-dropdown content">
           <?php echo($this->fetch('help')); ?>
     </div>
     </div>
+
+
+   
+    <div class="row">
+        
+    <?php
     
-    
-    
-    
+    echo($this->fetch('nav-edit'));
+    ?>
 		
-		
+    </div>
 		<div class="row panel">
 
 			<?php echo $this->fetch('content'); ?>
@@ -91,7 +98,7 @@ EDF:
 		
 		
 		
-		
+		<a name="Bottom" data-magellan-destination="Bottom"></a>
 		
 		
 		
@@ -103,7 +110,8 @@ EDF:
         	           	   
 </div>
     
-    
+
+
     
 <?= $this->Html->script('vendor/jquery'); ?>
 <?= $this->Html->script('foundation.min'); ?>

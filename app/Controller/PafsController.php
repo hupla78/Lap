@@ -3,24 +3,15 @@
 
 class PafsController extends AppController{
 
-/*App::uses('fpdf','Lib/php');
+public $components = array('Session','Cookie','PdfEdf');
 
+public function Paf_print(){
 
-// je suis la fonction qui rend un pdf 
-public function PAFprint(){
-
-
-
-$pdf = new FPDF();
-$pdf->AddPage();
-$pdf->SetFont('Arial','B',16);
-$pdf->Cell(40,10,'Hello World !');
-
-
-$pdf->Output();
+$this->PdfEdf->generate();
 die();
+
 }
-*/
+
 
 
 
@@ -68,6 +59,15 @@ public function index(){
 
 }
 
+public function add(){
+
+if(!empty($this->request->data)){
+$this->Paf->save($this->request->data);
+$this->redirect(array('controller'=>'Pafs','action'=>'view'));
+}
+
+
+}
 
 public function view(){
 
