@@ -81,9 +81,27 @@ $this->redirect(array('controller'=>'Pafs','action'=>'view'));
 }
 
 public function view(){
+$vt = array('id','n_DA','PF','PILOTE','TYPE','OBJET');
 
-$this->Paf->find('all');
-$this->set('tab',$this->Paf->find('all'));
+if(!empty($this->request->data['recherche']['ss'])){
+
+
+
+$tab = $this->Paf->find('all',array(
+            //optimi 'fields'=>array,
+            'conditions'=>array('Paf.'.$vt[$this->request->data['recherche']['TypeDeRecherche']].' like' => '%'.$this->request->data['recherche']['ss'].'%')
+            ));
+            if(empty($tab)){$tab = false;}
+
+}else{
+
+
+$tab = $this->Paf->find('all');
+
+
+}
+$this->set('vt',$vt);
+$this->set('tab',$tab);
 
 
 

@@ -4,11 +4,12 @@
     <div class="large-6 small-12 columns panel" data-equalizer-watch>
     <div class="row">
         <h4 class="text-center">Recherche un elments</h4>
-        <?php echo($this->Form->create('Recherche'));?>
+        <?php echo($this->Form->create('recherche'));?>
         
-        <div class="large-12 small-12 columns"><?php echo($this->Form->input('ss',array('label'=>false)));?></div>
+        <div class="large-12 small-12 columns">
+        <?php echo($this->Form->input('ss',array('label'=>false)));?></div>
 <div class="large-8 small-8 columns">
-<?php echo($this->Form->input('oo',array('type'=>'select','label'=>'Type de recherche sur','options'=>array('tout','id','ncommande','Pilote')))); ?>
+        <?php echo($this->Form->input('TypeDeRecherche',array('type'=>'select','label'=>'Type de recherche sur','options'=>$vt))); ?>
 </div>
         <div class="large-4 small-4 columns"><?php echo($this->Form->end('Recherche'));?></div>    
       </div>    
@@ -18,7 +19,7 @@
 <div class="row" data-equalizer>
         <h4 class="text-center">Faire une action</h4>
         <br>
-        <div class="large-6 small-3 columns"><a class="small button" style="display:block;" href="#" >rajouté un element</a></div>
+        <div class="large-6 small-3 columns"><a class="small button" style="display:block;" href="add" >rajouté un element</a></div>
         <div class="large-6 small-3 columns"><a class="small button" style="display:block;" href="#" >voir un element</a></div>
         <div class="large-6 small-3 columns"><a class="small button" style="display:block;" href="#" >édité un element</a></div>
         <div class="large-6 small-3 columns"><a class="small button" style="display:block;" href="#" >suprimé un element</a></div>
@@ -27,8 +28,21 @@
     </div>
     </div>
     
-
-    <table width="100%">
+<?php if(!$tab){
+    ?>
+    <div class="large-12 small-12 columns panel">
+        <h3 class="text-center">Aucun résultat</h3>
+        <h6 class="text-center">veuillez faire une autre recherche...</h6>
+    </div>
+    
+    
+    
+    <?php }else{ ?>
+    
+    
+    
+    
+    <table class="large-12 small-12 midle-12 columns">
  <thead>
         <tr>
         <th>ID</th>
@@ -86,7 +100,7 @@ echo $this->Html->link('Imprimer',array('controller'=>'Pafs','action'=>'Paf_prin
 
     
     </table>
-
+<?php } ?>
 
 
 <br>
