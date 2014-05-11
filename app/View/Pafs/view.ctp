@@ -66,7 +66,7 @@
 echo $this->Html->link('Voir',array('controller'=>'Pafs','action'=>'voir'));?>
 <br>
 <?php 
-echo $this->Html->link('Editer',array('controller'=>'Pafs','action'=>'edit',$temp['Paf']['id']));?>
+echo $this->Html->link('Editer',array( 'controller'=>'Pafs','action'=>'edit',$temp['Paf']['id']));?>
 <br>
 <?php
 echo $this->Html->link('Imprimer',array('controller'=>'Pafs','action'=>'Paf_print',$temp['Paf']['id']));?>
@@ -99,5 +99,4 @@ echo $this->Html->link('Imprimer',array('controller'=>'Pafs','action'=>'Paf_prin
 <?php
 $this->start('help');
 echo('Cette Page permet d\'avoir un aperçu , de faire une recherche et de trouvé un elements');
-$this->end();
-?>
+$this->end(); ?>

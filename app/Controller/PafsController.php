@@ -3,7 +3,9 @@
 
 class PafsController extends AppController{
 
-public $components = array('Session','Cookie','PdfEdfReP');
+public $components = array('Session','Cookie','PdfEdfReP','PdfEdfStock');
+
+
 
 public function Paf_print($id = false){
 
@@ -11,8 +13,11 @@ $content = $this->Paf->findById($id);
 
 
 if($id){
-$this->PdfEdfReP->generate($content);
-$this->PdfEdfReP->output();
+//$this->PdfEdfReP->generate($content);
+//$this->PdfEdfReP->output();
+
+$this->PdfEdfStock->generate($content);
+$this->PdfEdfStock->output();
 die();
 }else{
 $this->redirect(array('controller'=>'Pafs','action'=>'view'));

@@ -785,6 +785,7 @@ $this->pdf->Cell(115);
 $this->pdf->MultiCell(65,5,"Visa Mission Gestion Finances(*) pour les dossiers d'assistance technique (=> paragraphes 3 et 4 après signature de la demande d'achat papier.                                                                                                                                                                                                        ",1,'J',false);
 
 }
+
 public function output(){
 
 $this->pdf->Output();

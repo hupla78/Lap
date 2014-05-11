@@ -52,7 +52,9 @@ EDF:
         
         <div class="panel large-8 small-6 columns" data-equalizer-watch>
         <div class="row text-center">
-            <div class="columns large-3 small-3"><a href="#">Paf</a></div>
+            <div class="columns large-3 small-3">
+                <?php echo($this->Html->link('Paf',array('controller'=>'Pafs','action'=>'view')));?>
+            </div>
             <div class="columns large-3 small-3"><a href="#">aaaa</a></div>
             <div class="columns large-3 small-3"><a href="#">bbbb</a></div>
             <div class="columns large-3 small-3"><a href="#">cccc</a></div>
