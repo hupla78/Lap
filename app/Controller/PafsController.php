@@ -16,6 +16,8 @@ if($id){
 //$this->PdfEdfReP->generate($content);
 //$this->PdfEdfReP->output();
 
+
+
 $this->PdfEdfStock->generate($content);
 $this->PdfEdfStock->output();
 die();
@@ -103,6 +105,20 @@ $tab = $this->Paf->find('all');
 $this->set('vt',$vt);
 $this->set('tab',$tab);
 
+
+
+
+}
+
+ 
+public function Cloture($id = false){
+
+
+
+}
+
+
+public function Enjeux($id = false){
 
 
 

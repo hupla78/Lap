@@ -36,31 +36,17 @@
 ),
 'oninput'=>'budget.value = parseFloat( PafDate2014.value) + parseFloat( PafDate2015.value) + parseFloat( PafDate2016.value) + parseFloat( PafDate2017.value) + parseFloat( PafDate2018.value) + parseFloat( PafDate2019.value) + parseFloat( PafDate2020.value) ;') ));?>
 
-<div class="row" data-equalizer>
+<div class="row" >
+
+<a name="Information_Géneral"></a>
+<div class="row panel edf-orange">
 
 
-<div class="large-6 columns" data-equalizer-watch>
-
-    <a name="Information_Géneral"></a>
-
-
-<fieldset>
-    <legend><h4 data-magellan-destination="Information_Géneral">Information Géneral</h4></legend>
+<div class="large-12 columns text-center"> <h4 class="ll" data-magellan-destination="Information_Géneral">Information Géneral</h4></div>  
     
-  
-    
-
-    
-    
-    
-    
-
-<?php echo(
-  
-//clef prim
-$this->Form->input('id').
-
-
+    <div class="large-6 small-12 columns">
+            
+            <?php echo(
 $this->Form->input('n_DA').
 $this->Form->input('n_Affaires',array('label'=>'numero d\'affaire')).    
 $this->Form->input('n_Commande',array('label'=>'numero de Commande')).    
@@ -90,7 +76,19 @@ $this->Form->input('type_de_traitement', array(
 'AT-ISS',
 'autre'
 
-      ))).
+      ))))
+?>            
+            
+</div>
+        
+<div class="large-6 small-12 columns">
+            <?php echo(
+  
+//clef prim
+$this->Form->input('id').
+
+
+
       
 $this->Form->input('strat_envisage', array(
       'options' => array(
@@ -138,27 +136,35 @@ $this->Form->input('groupe',array(
 
       
 );?>
-   </fieldset>
+            
+        </div>
+        
+        
+        
+    </div>
+  
    
-</div>
+   
+   <br>
+   <a name="Besoin"></a>
+<div class="row panel edf-bleu">
+
+
+
+<div class="large-12 columns text-center"> <h4 class="ll" data-magellan-destination="Besoin">Besoin</h4></div>  
 
     
-<div class="large-6 columns " data-equalizer-watch>
-<a name="Besoin"></a>
-<fieldset>
-
-    <legend><h4 data-magellan-destination="Besoin">Besoin</h4></legend>
-    
-    
+    <div class="large-6 columns">
     
 <?php 
     echo(
     $this->Form->input('commandite').
-    $this->Form->input('dateDeCommandite',array('type'=>'date')).
+    $this->Form->input('dateDeCommandite',array('type'=>'date','div'=>'inline-date')).
     $this->Form->input('demandeCNPE').
-    $this->Form->input('Autre').
-    
-    
+    $this->Form->input('Autre')); ?>
+    </div>
+    <div class="large-6 columns">
+    <?php echo(
     
 $this->Form->input('criticite',array(
     'value'=>'0',
@@ -181,35 +187,38 @@ $this->Form->input('segmentation',array(
 $this->Form->input('MORIA',array(
     'option'=>array(
 'oui','non'
-))).
-
-$this->form->input('Object',array('type'=>'textarea'))
-    
-    
-);
-    
-    ?>
-
-</fieldset>
+)))); ?>
 </div>
-
-<div class="large-12 columns"> </div>
-    
-    
-
-<div class="large-6 columns " data-equalizer-watch>
-
-    <a name="Budget"></a>
-<fieldset>
-
-    <legend><h4 data-magellan-destination="Budget">Budget</h4></legend>
-
-    
+<div class="large-12 columns">
 <?php echo(
 
+$this->form->input('Object')
+    
+    
+); ?>
+</div>
+
+</div>
+
+
+
+
+
+
+<br>
+   <a name="Budget"></a>
+<div class="row panel edf-orange">
+
+<div class="large-12 columns text-center"> <h4 class="ll" data-magellan-destination="Budget">Budget</h4></div>
+
+
+
+<?php echo(
 $this->Form->input('date2014',array('type'=>'number','value'=>'0')).
 $this->Form->input('date2015',array('type'=>'number','value'=>'0')).
-$this->Form->input('date2016',array('type'=>'number','value'=>'0')).
+$this->Form->input('date2016',array('type'=>'number','value'=>'0')));?>
+
+<?php echo(
 $this->Form->input('date2017',array('type'=>'number','value'=>'0')).
 $this->Form->input('date2018',array('type'=>'number','value'=>'0')).
 $this->Form->input('date2019',array('type'=>'number','value'=>'0')).
@@ -218,42 +227,52 @@ $this->Form->input('date2020',array('type'=>'number','value'=>'0'))
 );?>
 <output for="PafDate2014 PafDate2015 PafDate2016 PafDate2017 PafDate2018 PafDate2019 PafDate2020"  id="budget" name="budget">0</output>
     
-</fieldset>
 </div>
 
-<div class="large-6 columns" data-equalizer-watch>
 
 
-<a name="Documents"></a>
-<fieldset>
 
-    <legend><h4 data-magellan-destination="Documents">Documents</h4></legend>
+<br>
+   <a name="Documents"></a>
+<div class="row panel edf-bleu">
+
+
+<div class="large-12 columns text-center"> <h4 class="ll" data-magellan-destination="Documents">Documents</h4></div>
     
-    
+
+
+<div class="large-6 columns"> 
+
 <?php echo(
     
 $this->Form->input('n_CSCT',array('label'=>'numero de CSCT')).
 $this->Form->input('n_CSCP',array('label'=>'numero de CSCP')).
-$this->Form->input('tableau_analyse',array('label'=>'Tableau d\'analyse')).
+$this->Form->input('tableau_analyse',array('label'=>'Tableau d\'analyse')));?>
+</div>   
+
+<div class="large-6 columns"> 
+<?php echo(
 $this->Form->input('CEIDRE',array('label'=>'Envoi mandat CEIDRE','value'=>'0','type'=>'number')).
 $this->Form->input('NAR').
 $this->Form->input('contratCadre')
-     ) 
+     );
     ?>
-</fieldset>
+</div>
 </div>
 
-<div class="large-12 columns">
-    <a name="Jalons"></a>
-    
-<fieldset>
 
-    <legend><h4 data-magellan-destination="Jalons">Jalons</h4></legend>
+<br>
+   <a name="Jalons"></a>
+<div class="row panel edf-orange">
+
+<div class="large-12 columns text-center"> <h4 class="ll" data-magellan-destination="Jalons">Jalons</h4></div>
+
+
+
     
     
-<div class="row">
-    
-    <div class="large-6 columns">
+
+<div class="large-6 small-12 columns">    
         
 <?php 
     echo(
@@ -261,40 +280,38 @@ $this->Form->input('contratCadre')
 $this->Form->input('emergence_du_besoin').
 $this->Form->input('ouverture_du_dosier').
 $this->Form->input('obtention_des_pieces').
-$this->Form->input('date_du_besoin'))?>
+$this->Form->input('date_du_besoin',array('type'=>'date','div'=>'inline-date')))?>
     </div>
-    <div class="large-6 columns">
-        <?php echo($this->Form->input('livraison_souhaitee').
+    <div class="large-6 small-12 columns">
+<?php echo($this->Form->input('livraison_souhaitee').
 $this->Form->input('delai').
 $this->Form->input('debut_prestation').
 $this->Form->input('notification_souhaitee').
 $this->Form->input('Sollicitation_DA')
-
+//stop
     
     );  ?>
         
     </div>
-</div>
-</fieldset>  
+
+ 
 </div>    
 
         
 
-    
-     
-<div class="large-6 columns" data-equalizer-watch>
-    
-    <a name="Revue_des_exigences"></a>
-    
-<fieldset>
+<br>
+<a name="Revue_des_exigences"></a>
+<div class="row panel edf-bleu">
 
-    <legend><h4 data-magellan-destination="Revue_des_exigences">Revue des exigences</h4></legend>
+<div class="large-12 columns text-center"> <h4 class="ll" data-magellan-destination="Revue_des_exigences">Revue des exigences</h4></div>
+     
+     
     
     
     <?php 
     echo(
     
-$this->Form->input('DateRDE',array('type'=>'Date')).
+$this->Form->input('DateRDE',array('type'=>'date','div'=>'inline-date')).
 $this->Form->input('Date_de_notification', array('type'=>'D33333ate')).
 $this->Form->input('Reprévision') 
     );?>
@@ -303,18 +320,21 @@ $this->Form->input('Reprévision')
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, debitis, quas cum cumque consectetur voluptatem incidunt expedita soluta libero quos pariatur omnis tempore tenetur commodi at modi enim nostrum explicabo.
         </div>    
     
- 
-    </fieldset>
+    <?php echo(
+    $this->Form->submit('Valider',array('class'=>'small button','div'=>false)).
+    $this->Html->Link('Annuler','/Pafs/view',array('class'=>'small button')));?>
     
 
 </div>
  
-<div class="large-6 columns" data-equalizer-watch>
-    
-    
-    <a name="Imputation"></a>
-<fieldset>
-    <legend><h4 data-magellan-destination="Imputation">Imputation</h4></legend>
+ 
+ <br>
+<a name="Imputation"></a>
+<div class="row panel edf-orange">
+
+<div class="large-12 columns text-center"> <h4 class="ll" data-magellan-destination="Imputation">Imputation</h4></div>
+ 
+
         
 <?php    echo(
 $this->Form->input('OI/EOTP').
@@ -335,34 +355,41 @@ $this->Form->input('Budget')
         <h5>PGI</h5>
         cde:
     </div>
-    </fieldset>
+    
             
 </div>   
     
+<br>
+<br>
 
- 
-</div>
-
-<div class="large-1 large-centered columns">
+<div class="large-centered columns">
     
-    <?php echo($this->Form->end('Valider')); ?>
+    <?php echo(
+    $this->Form->submit('Valider',array('class'=>'small button','div'=>false)).
+    $this->Html->Link('Annuler','/Pafs/view',array('class'=>'small button')).
+    
+    
+    $this->Form->end()); ?>
 </div>
 
 
 
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+</div>
 
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <?php
 $this->start('help');

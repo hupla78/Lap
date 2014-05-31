@@ -129,7 +129,7 @@ $this->pdf->Cell(-9.5);
 $this->pdf->Cell(60,10,"N° D'affaire : ",0,1,'C');
 $this->pdf->ln(-10);
 $this->pdf->Cell(20);
-$this->pdf->Cell(60,10,$value['Paf']['n_DA'],0,1,'C');//exemple de comment tu doit faire avec les bonne valeur
+$this->pdf->Cell(60,10,$value['Paf']['n_Affaires'],0,1,'C');//exemple de comment tu doit faire avec les bonne valeur
 $this->pdf->ln(-10);
 $this->pdf->Cell(90.2);
 $this->pdf->Cell(60,10,'Affaire suivi par :',0,1,'C');
@@ -141,19 +141,19 @@ $this->pdf->Cell(-2.3);
 $this->pdf->Cell(60,10,"N° Demande d'achat : ",0,1,'C');
 $this->pdf->ln(-10);
 $this->pdf->Cell(20);
-$this->pdf->Cell(60,10,'G',0,1,'C');
+$this->pdf->Cell(60,10,$value['Paf']['n_DA'],0,1,'C');
 $this->pdf->ln(-10);
 $this->pdf->Cell(83.5);
 $this->pdf->Cell(60,10,'Groupe :',0,1,'C');
 $this->pdf->ln(-10);
 $this->pdf->Cell(112);
-$this->pdf->Cell(60,10,'N',0,1,'C');
+$this->pdf->Cell(60,10,$value['Paf']['groupe'],0,1,'C');
 $this->pdf->ln(-5);
 $this->pdf->Cell(-7);
 $this->pdf->Cell(60,10,"N° Commande : ",0,1,'C');
 $this->pdf->ln(-10);
 $this->pdf->Cell(20);
-$this->pdf->Cell(60,10,'I',0,1,'C');
+$this->pdf->Cell(60,10,$value['Paf']['n_Commande'],0,1,'C');
 $this->pdf->ln(-10);
 $this->pdf->Cell(80.2);
 $this->pdf->Cell(60,10,'PF :',0,1,'C');
@@ -161,13 +161,14 @@ $this->pdf->ln(-10);
 $this->pdf->Cell(112);
 $this->pdf->Cell(60,10,'C',0,1,'C');
 
+
 $this->pdf->Cell(-8);
 $this->pdf->SetFont('Arial','B',10);
 
 $this->pdf->Cell(60,10,'Objet du besoin :',0,1,'C');
 $this->pdf->SetFont('Arial','',10);
 $this->pdf->Cell(5);
-$this->pdf->MultiCell(180,5,'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, nostrum, ipsum, similique, quia nesciunt alias deserunt laudantium accusantium soluta distinctio commodi non tenetur consectetur. Optio est laudantium neque inctio commodi non tenetur consectetur. Optio est laudantium neque consectetur. Optio est laudantium ',1,'J',false);
+$this->pdf->MultiCell(180,5,'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, dolores, perferendis, odit incidunt quo ea corporis officiis mollitia autem et ex velit architecto vitae necessitatibus odio magnam deleniti est in. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, mollitia, officiis iste magnam dicta quidem ad voacilis.',1,'J',false);
 $this->pdf->ln(6);
 $this->pdf->Cell(5);
 $this->pdf->Cell(10,2,'Comandite',0,0,'L');

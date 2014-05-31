@@ -55,9 +55,9 @@ EDF:
             <div class="columns large-3 small-3">
                 <?php echo($this->Html->link('Paf',array('controller'=>'Pafs','action'=>'view')));?>
             </div>
-            <div class="columns large-3 small-3"><a href="#">aaaa</a></div>
-            <div class="columns large-3 small-3"><a href="#">bbbb</a></div>
-            <div class="columns large-3 small-3"><a href="#">cccc</a></div>
+            <div class="columns large-3 small-3"><a href="#">menu 1</a></div>
+            <div class="columns large-3 small-3"><a href="#">menu 2</a></div>
+            <div class="columns large-3 small-3"><a href="#">menu 3</a></div>
         </div>
 
             

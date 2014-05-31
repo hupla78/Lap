@@ -56,11 +56,24 @@ margin-right: auto;
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea{
 margin: 0px 0px 5px 0px ;}
 
-.inline-date div select {
-    width:60px;
+.inline-date select {
+    width:80px;
     display: inline;
 }
 
-.inline-date div label{
+.inline-date label{
     display: inline;
+    margin-right: 20px;
 }
+
+.edf-bleu{
+background: #3B8183;
+}
+.edf-orange{
+background: #FF9C5B;}
+
+.ll{
+color: white;}
+
+select{
+margin-bottom: 5px;}
